@@ -292,6 +292,7 @@ bazel-*
 .envrc
 .psenvrc
 venv
+.venv
 venv/
 .vscode
 
