@@ -1,8 +1,7 @@
-from src import Background, Game
+from src import Game
 import pygame, sys
 
 if __name__ == '__main__':
-    bg = Background()
     game = Game()
     game.mainloop()
 
