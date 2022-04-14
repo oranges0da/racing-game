@@ -1,8 +1,10 @@
 import pygame
 import sys
+from background import Background as bg
+from game import SCREEN
 
 class Player:
-    def __init__(self, bg):
+    def __init__(self):
         self.image_straight = pygame.image.load('images/player.png')
         self.image_left = pygame.image.load('images/player_left.png')
         self.image_right = pygame.image.load('images/player_right.png')
@@ -10,7 +12,6 @@ class Player:
         self.trace = (0, 0, 0, 0)
         self.posx, self.posy, self.speed, self.carspeed = 315, 650, 0, -5
         self.moving_left, self.moving_right, self.gas, self.brake = False, False, False, False
-        self.bg = bg
     
     def move(self):
         for event in pygame.event.get():
@@ -39,4 +40,3 @@ class Player:
     def draw(self):
         self.trace = SCREEN.blit(self.image, (int(self.posx), int(self.posy)))
         self.trace = (self.trace[0]+5, self.trace[1]+5, self.trace[2]-10, self.trace[3]-10)
-
