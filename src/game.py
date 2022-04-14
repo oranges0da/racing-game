@@ -11,3 +11,6 @@ WINDOW = pygame.display
 WINDOW.set_caption("Racing Game")
 SCREEN = WINDOW.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+class Game():
+    def __init__(self):
+        pass
