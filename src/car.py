@@ -1,4 +1,6 @@
-import pygame
+import pygame, random
+
+from src import player
 
 class Car:
     def __init__(self, posx):
@@ -11,4 +13,18 @@ class Car:
         self.is_moving = False
     
     def move(self):
-        if
+        if not self.is_moving:
+            rnd = random.randint(1, 100)
+            if rnd == 50:
+                self.is_moving = True
+                self.speed = random.randint(1, 3)
+        else:
+            self.posy += self.speed
+            if self.posy >= SCREEN_HEIGHT and player.speed > 200:
+                self.posy = -500
+                self.is_moving = False
+    
+    def draw(self):
+        self.trace = SCREEN.blit(self.image, (int(self.posx), int(self.posy)))
+        self.trace = (self.trace[0]+5, self.trace[1]+5, self.trace[2]-10, self.trace[3]-10)
+        
