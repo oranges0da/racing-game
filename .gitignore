@@ -1,3 +1,5 @@
+
+   
 .coverage
 coverage.xml
 .dmypy.json
@@ -292,8 +294,9 @@ bazel-*
 .envrc
 .psenvrc
 venv
-.venv
 venv/
+/venv
+.venv
 .vscode
 
 # generated shellcheck directories
