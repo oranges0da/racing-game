@@ -1,4 +1,5 @@
 import pygame, random
+from game import SCREEN, SCREEN_HEIGHT
 
 class Obstacle:
     def __init__(self):

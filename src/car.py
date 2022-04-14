@@ -1,6 +1,7 @@
 import pygame, random
 
 from src import player
+from game import SCREEN, SCREEN_HEIGHT
 
 class Car:
     def __init__(self, posx):
